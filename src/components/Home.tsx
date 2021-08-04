@@ -15,7 +15,6 @@ function Home():JSX.Element {
           });
           const json = await response.json();
           setSneaker(json)
-          console.log(json)
         }
         fetchSneakers();
       }, [])
@@ -33,9 +32,9 @@ function Home():JSX.Element {
                    price: any;
                    gender_category: any;
                    release_date: any;
-                   size: any;
+                   sizes: any;
                  }) => (
-              <div className="col-lg-4 col-md-6" key={sneaker.release_date}>
+              <div className="col-lg-4 col-md-6" key={sneaker._id}>
               <div className="card h-100">
                 <div className="single-item item-style-1">
                   <div className="sneaker-image">
@@ -63,7 +62,7 @@ function Home():JSX.Element {
                 <ul className="item-footer">
                     
                   <li>
-                    <Link to={`#`} className="btn btn-sm btn-outline-secondary">Details </Link>
+                    <Link to={`/sneakers/${sneaker._id}`} className="btn btn-sm btn-outline-secondary">Details </Link>
                   </li>
                 </ul>
               </div>

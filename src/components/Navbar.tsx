@@ -13,7 +13,6 @@ function Navbar() {
                 </div>
                 <ul className="main-menu visible-on-click" id="main-menu">
                     <li><Link className={"nav-link"} to={"/"}> Sneaker City </Link></li>
-                    <li><Link className={"nav-link"} to={"/Men"}> Men </Link></li>
                 </ul>
             </div>
         </header>
